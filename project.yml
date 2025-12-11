@@ -1,0 +1,24 @@
+name: MiniIOSApp
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: 15.0
+targets:
+  MiniIOSApp:
+    type: application
+    platform: iOS
+    sources: [MiniIOSApp]
+    settings:
+      base:
+        INFOPLIST_FILE: MiniIOSApp/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.MiniIOSApp
+  
+  MiniIOSAppTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [MiniIOSAppTests]
+    dependencies:
+      - target: MiniIOSApp
+    settings:
+      base:
+        INFOPLIST_FILE: MiniIOSAppTests/Info.plist
