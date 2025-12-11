@@ -25,13 +25,11 @@ jobs:
           xcodebuild build \
             -project MiniIOSApp.xcodeproj \
             -scheme MiniIOSApp \
-            -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
-            -quiet
+            -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest'
 
       - name: Run Tests
         run: |
           xcodebuild test \
             -project MiniIOSApp.xcodeproj \
             -scheme MiniIOSApp \
-            -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
-            -quiet
+            -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest'
